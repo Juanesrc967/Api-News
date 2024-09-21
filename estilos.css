@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap');
+
+:root {
+    --Titulo:#f17e18;
+    --Texto:#000000;
+    --Texto2: #ffffff;
+    --Buscador: #ccc;
+    --cardNoticias:#eeee;
+}
+/*background: var(--grey);*/
+*{
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+h1{
+    text-align: center;
+    color:var(--Titulo) ;
+    font-size: 2.8rem;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+}
+nav{
+    text-align: center;
+    margin-bottom: 20px;
+}
+nav span{
+    display: inline-block;
+    background-color: var(--Texto);
+    color: var(--Texto2);
+    padding: 5px 10px;
+    border-radius: 30px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+nav span:hover{
+    color: var(--Titulo);
+}
+header input{
+    padding: 5px 10px;
+    border: none;
+    border: 2px solid var(--Buscador);
+    border-radius: 30px;
+}
+header button{
+    border: none;
+    padding: 7px 10px;
+    border-radius: 30px;
+    border: 2px solid var(--Buscador);
+}
+.container-noticias{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap:30px;
+    padding-bottom: 7rem;
+    position: relative;
+   
+}
+.container-noticias .item{
+    background-color: var(--cardNoticias);
+    max-width: 360px;
+    border:2px solid var(--cardNoticias);
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+.container-noticias .item:hover{
+    box-shadow: 0 0 10px 5px var(--Titulo);
+}
+.container-noticias .item:hover h2{
+    text-decoration: underline;
+}
+.container-noticias .item .info_item{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.container-noticias .item img{
+    width: 100%;
+}
+.container-noticias #btnSiguiente{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    margin-top: 40px; 
+    background-color: var(--Texto);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid var(--Titulo);
+    border-radius: 15px;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px; /* Position fixed at the bottom */
+}
+.container-noticias #btnSiguiente:hover{
+    background-color: var(--Titulo);
+    border-color: var(--Titulo);
+}
