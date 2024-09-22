@@ -6,11 +6,10 @@ let temaActual = "Tecnología";
 let noticias = {
     "apiKey": "891d44cf144842d2a20d032585398491",
     fetchNoticias: function (categoria) {
-        fetch(
-            "https://newsapi.org/v2/everything?q="
+        fetch("https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?q="
             + categoria +
-            "&language=es&apiKey=" + this.apiKey
-        )
+            "&language=es&apiKey=" + this.apiKey)
+        
             .then((response) => response.json())
             .then((data) => this.displayNoticias(data));
     },
