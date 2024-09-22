@@ -4,12 +4,12 @@ let pageInicial = 0;
 let temaActual = "Tecnología";
 
 let noticias = {
-    "apiKey": "863f3b9948314b3ba84a41c76f51a2f0",
+    "apiKey": "891d44cf144842d2a20d032585398491",
     fetchNoticias: function (categoria) {
         fetch(
             "https://newsapi.org/v2/everything?q="
             + categoria +
-            "&language=es&apiKey=863f3b9948314b3ba84a41c76f51a2f0" + this.apiKey
+            "&language=es&apiKey=" + this.apiKey
         )
             .then((response) => response.json())
             .then((data) => this.displayNoticias(data));
