@@ -9,7 +9,7 @@ let noticias = {
         fetch(
             "https://newsapi.org/v2/everything?q="
             + categoria +
-            "&language=es&apiKey=" + this.apiKey
+            "&language=es&apiKey=863f3b9948314b3ba84a41c76f51a2f0" + this.apiKey
         )
             .then((response) => response.json())
             .then((data) => this.displayNoticias(data));
